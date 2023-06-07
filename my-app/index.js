@@ -18,78 +18,60 @@ app.get('/', cors(), (req,res) => {
 
 app.post("/", async (req, res) => {
     const { info } = req.body;
-    
+
     switch(info.type) {
         case "truth":
-            getTruth(res);
+            axios({
+                method: 'get',
+                url: 'https://api.truthordarebot.xyz/v1/truth'
+            })
+            .then(function(response){
+                res.send(response.data);
+                console.log("response sent to frontend");
+            })
+        break;
+        case "dare":
+            axios({
+                method: 'get',
+                url: 'https://api.truthordarebot.xyz/api/dare '
+            })
+            .then(function(response){
+                res.send(response.data);
+                console.log("response sent to frontend");
+            })
+        break;
+        case "wyr":
+            axios({
+                method: 'get',
+                url: 'https://api.truthordarebot.xyz/api/wyr'
+            })
+            .then(function(response){
+                res.send(response.data);
+                console.log("response sent to frontend");
+            })
+        break;
+        case "nhie":
+            axios({
+                method: 'get',
+                url: 'https://api.truthordarebot.xyz/api/nhie'
+            })
+            .then(function(response){
+                res.send(response.data);
+                console.log("response sent to frontend");
+            })
+        break;
+        case "paranoia":
+            axios({
+                method: 'get',
+                url: 'https://api.truthordarebot.xyz/api/paranoia'
+            })
+            .then(function(response){
+                console.log(response.data);
+                console.log("response sent to frontend");
+            })
         break;
     }
 });
 
-// get truth
-
-function getTruth(res){
-    axios({
-        method: 'get',
-        url: 'https://api.truthordarebot.xyz/v1/truth'
-    })
-    .then(function(response){
-        res.send(response.data);
-        console.log("sending data to frontend");
-    })
-}
-
-
-// get dare
-
-function getDare(res){
-    axios({
-        method: 'get',
-        url: 'https://api.truthordarebot.xyz/api/dare '
-    })
-    .then(function(response){
-        res.send(response.data);
-        console.log("sending data to frontend");
-    })
-}
-
-
-// get would you rather
-
-function getWyr(res){
-    axios({
-        method: 'get',
-        url: 'https://api.truthordarebot.xyz/api/wyr'
-    })
-    .then(function(response){
-        res.send(response.data);
-        console.log("sending data to frontend");
-    })
-}
-
-// get never have I ever 
-
-function getNhie(res){
-    axios({
-        method: 'get',
-        url: 'https://api.truthordarebot.xyz/api/nhie'
-    })
-    .then(function(response){
-        res.send(response.data);
-        console.log("sending data to frontend");
-    })
-}
-
-// get paranoia 
-
-function getParanoia(res){
-    axios({
-        method: 'get',
-        url: 'https://api.truthordarebot.xyz/api/paranoia'
-    })
-    .then(function(response){
-        console.log(response.data);
-    })
-}
 
 app.listen(3000);
