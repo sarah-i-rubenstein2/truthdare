@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Button, View, StyleSheet } from 'react-native';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1> 🌹Truth/Dare Gamez🌹</h1>
+        <View style={styles.container}>
+              <View style={styles.buttonContainer}>
+                <Button title="Truth"/>
+              </View>
+              <View style={styles.buttonContainer}>
+                <Button title="Dare"/>
+              </View>
+            </View>
       </header>
     </div>
   );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonContainer: {
+        flex: 1,
+    }
+});
 
 export default App;
