@@ -2,15 +2,77 @@
   text-align: center;
   min-height: 100vh;
   background-size: 100%;
-  background-color: blue;
+  background-color: #3A3B3C;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjM1OTExYjhlZDAzZDY5YTgyYzkyMGVmN2UwNGQxNmMzMWQ1ODFjMSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/26xBBif0I2TN544BG/giphy.gif");
+  background-image: url("https://bst.icons8.com/wp-content/themes/icons8/app/uploads/2020/02/animated-icons-love-1.gif");
   padding: 1%;
 }
 
 .App-header {
-  justify-content: start;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #E55451;
+}
+
+.Truth{
+  font-size: 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  width: 300px;
+  background-color:royalblue;
+
+}
+
+.Dare{
+  font-size: 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  width: 300px;
+  background-color:royalblue
+}
+
+.Dare:hover{
+  opacity: 50%;
+  font-size: 0;
+}
+
+.Dare:hover:after{
+  content: "getting physical?";
+  font-size: 20px;
+}
+
+.Truth:hover{
+  opacity: 50%;
+  font-size: 0;
+}
+
+.Truth:hover:after{
+  content: "getting honest!";
+  font-size: 20px;
+}
+
+.Prompt{
+  color: dodgerblue;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Challenge{
+  color:dodgerblue;
+  text-align: center;
+  background-color: pink;
+  background-position: center;
+  height: 100px;
+  display: flexbox;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  height: 300px;
+  margin: 0 auto 0 auto;
 }

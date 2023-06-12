@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-import { Button, View, StyleSheet } from 'react-native';
 import './App.css';
 
 
@@ -8,29 +6,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1> 🌹Truth/Dare Gamez🌹</h1>
-        <View style={styles.container}>
-              <View style={styles.buttonContainer}>
-                <Button title="Truth"/>
-              </View>
-              <View style={styles.buttonContainer}>
-                <Button title="Dare"/>
-              </View>
-            </View>
+        <button className='Truth' > Truth </button>
+        <button className='Dare' > Dare </button>
+        <p className="Prompt"> Your Challenge</p>
+        <p className='Challenge'> If clicked, the challenge words will appear </p>
       </header>
     </div>
   );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    buttonContainer: {
-        flex: 1,
-    }
-});
 
 export default App;
